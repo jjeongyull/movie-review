@@ -101,7 +101,7 @@
     function review(id){
       target_id = id
       $.ajax({
-        url:`https://universeapi.net/review/list?movie_id=${id}`,
+        url:`http://universeapi.net/review/list?movie_id=${id}`,
         data:{},
         type:"GET",
         success:function(json){
@@ -122,7 +122,7 @@
       let review_html = `<p>${review}</p>`
 
       $.ajax({
-        url:`https://universeapi.net/review/add`,
+        url:`http://universeapi.net/review/add`,
         data:{
           movie_id:target_id,
           review:review_html
